@@ -1,0 +1,309 @@
+<?php
+
+/**
+function custom_form_alter(&$form, &$form_state, $form_id) {
+
+    drupal_set_message("Form ID is : " . $form_id);
+     
+     
+    
+}
+ * 
+ */
+
+function custom_init() {
+  $restrictions = custom_get_restrictions();
+  global $user;
+  foreach ($restrictions as $path => $roles) {
+    // See if the current path matches any of the patterns provided.
+    if (drupal_match_path($_GET['q'], $path)) {
+      // It matches, check the current user has any of the required roles
+      $valid = FALSE;
+      foreach ($roles as $role) {
+        if (in_array($role, $user->roles)) {
+          $valid = TRUE;
+          break;
+        }
+      }
+
+      if (!$valid) {
+        drupal_set_message('You must login in before you can access the '
+                . 'report content type. It is members exclusive area', 'warning');  
+        drupal_goto('/user');
+       //return drupal_access_denied();
+        
+      }
+    }
+  }
+}
+
+function custom_get_restrictions() {
+  // Obviously this data could come from anywhere (database, config file, etc.)
+  // This array will be keyed by path and contain an array of allowed roles for that path
+  return array(
+    
+    '*/reports' => array('authenticated user', 'administrator','alaska','oregon'
+        ,'washington', 'inland empire'),
+    '*/reports/*' => array('authenticated user', 'administrator','alaska','oregon'
+        ,'washington', 'inland empire'),  
+  );
+}
+
+
+function custom_form_reports_node_form_alter(&$form, &$form_state, $form_id) {
+    //drupal_set_message("Form ID is : " . $form_id);
+    global $user;
+    $account = user_load($user->uid);
+    //Role 4 is Alask
+    if(user_has_role(4, $account)) { 
+                $term_id = 3; // Alaska
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }
+            // Role 5 is oregon
+    if(user_has_role(5, $account)) { 
+                $term_id = 4; // Oregon
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }
+            
+            //Role 6 is Washinton state
+    if(user_has_role(6, $account)) { 
+                $term_id = 1; // Washiton state
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]);
+                }
+            }
+            
+            // Role7 is Inland Empire
+    if(user_has_role(7, $account)) { 
+                $term_id = 2; // Inland Empie
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }        
+}
+
+
+function custom_form_forestry_node_form_alter(&$form, &$form_state, $form_id) {
+    //drupal_set_message("Form ID is : " . $form_id);
+    global $user;
+    $account = user_load($user->uid);
+    //Role 4 is Alask
+    if(user_has_role(4, $account)) { 
+                $term_id = 3; // Alaska
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }
+            // Role 5 is oregon
+    if(user_has_role(5, $account)) { 
+                $term_id = 4; // Oregon
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }
+            
+            //Role 6 is Washinton state
+    if(user_has_role(6, $account)) { 
+                $term_id = 1; // Washiton state
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]);
+                }
+            }
+            
+            // Role7 is Inland Empire
+    if(user_has_role(7, $account)) { 
+                $term_id = 2; // Inland Empie
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }        
+}
+
+
+function custom_form_article_node_form_alter(&$form, &$form_state, $form_id) {
+    //drupal_set_message("Form ID is : " . $form_id);
+    global $user;
+    $account = user_load($user->uid);
+    //Role 4 is Alask
+    if(user_has_role(4, $account)) { 
+                $term_id = 3; // Alaska
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }
+            // Role 5 is oregon
+    if(user_has_role(5, $account)) { 
+                $term_id = 4; // Oregon
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }
+            
+            //Role 6 is Washinton state
+    if(user_has_role(6, $account)) { 
+                $term_id = 1; // Washiton state
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]);
+                }
+            }
+            
+            // Role7 is Inland Empire
+    if(user_has_role(7, $account)) { 
+                $term_id = 2; // Inland Empie
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }        
+}
+
+function custom_form_chapter_node_form_alter(&$form, &$form_state, $form_id) {
+    //drupal_set_message("Form ID is : " . $form_id);
+    global $user;
+    $account = user_load($user->uid);
+    //Role 4 is Alask
+    if(user_has_role(4, $account)) { 
+                $term_id = 3; // Alaska
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }
+            // Role 5 is oregon
+    if(user_has_role(5, $account)) { 
+                $term_id = 4; // Oregon
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }
+            
+            //Role 6 is Washinton state
+    if(user_has_role(6, $account)) { 
+                $term_id = 1; // Washiton state
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]);
+                }
+            }
+            
+            // Role7 is Inland Empire
+    if(user_has_role(7, $account)) { 
+                $term_id = 2; // Inland Empie
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }        
+}
+
+
+function custom_form_events_node_form_alter(&$form, &$form_state, $form_id) {
+    //drupal_set_message("Form ID is : " . $form_id);
+    global $user;
+    $account = user_load($user->uid);
+    //Role 4 is Alask
+    if(user_has_role(4, $account)) { 
+                $term_id = 3; // Alaska
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }
+            // Role 5 is oregon
+    if(user_has_role(5, $account)) { 
+                $term_id = 4; // Oregon
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }
+            
+            //Role 6 is Washinton state
+    if(user_has_role(6, $account)) { 
+                $term_id = 1; // Washiton state
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]);
+                }
+            }
+            
+            // Role7 is Inland Empire
+    if(user_has_role(7, $account)) { 
+                $term_id = 2; // Inland Empie
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }        
+}
+
+function custom_form_outreach_and_eduction_node_form_alter(&$form, &$form_state, $form_id) {
+    //drupal_set_message("Form ID is : " . $form_id);
+    global $user;
+    $account = user_load($user->uid);
+    //Role 4 is Alask
+    if(user_has_role(4, $account)) { 
+                $term_id = 3; // Alaska
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }
+            // Role 5 is oregon
+    if(user_has_role(5, $account)) { 
+                $term_id = 4; // Oregon
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }
+            
+            //Role 6 is Washinton state
+    if(user_has_role(6, $account)) { 
+                $term_id = 1; // Washiton state
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]);
+                }
+            }
+            
+            // Role7 is Inland Empire
+    if(user_has_role(7, $account)) { 
+                $term_id = 2; // Inland Empie
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }        
+}
+
+
+function custom_form_policy_node_form_alter(&$form, &$form_state, $form_id) {
+    //drupal_set_message("Form ID is : " . $form_id);
+    global $user;
+    $account = user_load($user->uid);
+    //Role 4 is Alask
+    if(user_has_role(4, $account)) { 
+                $term_id = 3; // Alaska
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }
+            // Role 5 is oregon
+    if(user_has_role(5, $account)) { 
+                $term_id = 4; // Oregon
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }
+            
+            //Role 6 is Washinton state
+    if(user_has_role(6, $account)) { 
+                $term_id = 1; // Washiton state
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]);
+                }
+            }
+            
+            // Role7 is Inland Empire
+    if(user_has_role(7, $account)) { 
+                $term_id = 2; // Inland Empie
+                foreach($form['field_regions'][LANGUAGE_NONE]['#options'] as $k => $v) {
+                    if($k != $term_id) unset($form['field_regions'][LANGUAGE_NONE]['#options'][$k]); 
+                }
+            }        
+}
+
+

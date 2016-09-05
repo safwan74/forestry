@@ -1,0 +1,4 @@
+name = Customisation
+description = This module is customising drupal specially the node access.
+core = 7.x
+
