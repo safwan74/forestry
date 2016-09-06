@@ -9,7 +9,8 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
        <?php echo views_embed_view('up_coming_events', 'block'); ?>
 </div>
 <div class="footer-div">
-
+<p>SAF NW OFFICE 4033 SW CANYON RD. PORTLAND, OR 97221 | PHONE: 503.224.8046 | FAX: 503.226.2515 | INFO@FORESTRY.ORG | COPYRIGHT (C) 2012 FORESTRY.ORG</p>
+<div style="position:relative; float: right; padding-right: 25%; margin-top: 50px;">
 <a href="<?php
 if (strpos($url,'washington-state') !== false) {
     echo "https://www.facebook.com/WSSAF1";
@@ -46,11 +47,7 @@ else{
 
 ?>">
     <img src="/sites/all/images/twitter.png"></a>
+</div>
     
-    
-
-    
-
-<p>SAF NW OFFICE 4033 SW CANYON RD. PORTLAND, OR 97221 | PHONE: 503.224.8046 | FAX: 503.226.2515 | INFO@FORESTRY.ORG | COPYRIGHT (C) 2012 FORESTRY.ORG</p>
 </div>
 

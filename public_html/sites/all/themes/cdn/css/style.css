@@ -345,7 +345,8 @@ header h2 a{
     border: 1px #e7e7e7 solid;
     margin-bottom: 2px;
     padding: 20px;
-    
+    background: #FFFFFF;
+    margin-top: 40px;
 }
 
 .node.node-promoted.node-teaser .node-readmore a, .node-teaser .node-readmore a,
@@ -400,7 +401,9 @@ fieldset .fieldset-legend {
     padding-top: 10px;
 }
 
-
+.region.region-sidebar-second{
+  margin-top: 30px;  
+}
 
 .links.list-inline{
     position:relative;
@@ -446,6 +449,13 @@ fieldset .fieldset-legend {
     
     .footer a{
         color: #777;
+    }
+    
+    .footer .footer-div:first-child{
+        margin-top: -20px;
+    }
+    .footer .date-nav {
+        padding-bottom: 0px;
     }
     .date-display-start, .date-display-end, .date-display-single{
         color: #cc3300;
@@ -526,6 +536,24 @@ fieldset .fieldset-legend {
     background: white;
    
 }
+
+#user-login, #user-register-form, #user-pass, #contact-site-form{
+    padding: 50px;
+    background: white;
+}
+.region.region-content{
+    padding: 20px;
+    background: white;
+}
+.page-frontpage .region.region-content, 
+.page-washington-state .region.region-content,
+.page-inland-empire .region.region-content,
+.page-alaska .region.region-content,
+.page-taxonomy-term-6 .region.region-content {
+    padding: 0px;
+    background: none;
+}
+
 @media screen and (min-width: 1500px) {
     #custom-search-block{
         right: 19.2%;
@@ -560,11 +588,7 @@ fieldset .fieldset-legend {
     margin-left: 3%;
 }
     
-    .node.node-promoted.node-teaser{
     
-    margin-top: 40px;
-    padding: 20px;
-}
     #block-views-frontpage-block-1, #block-views-frontpage-block-2,
     #block-views-frontpage-block-3, #block-views-frontpage-block-4{
         position:relative;
