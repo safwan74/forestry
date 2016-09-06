@@ -589,6 +589,33 @@ fieldset .fieldset-legend {
     padding: 0px;
     background: none;
 }
+.toolbar #custom-search-block{
+    position:relative;
+    float: right;
+    top: -40px;
+    right: 7%;
+}
+.toolbar .lead.slogan{
+    position:relative;
+    float: left;
+   // width: 50%;
+}
+.toolbar #navbar.navbar.container.navbar-default{
+    position:relative;
+    float: left;
+    left: 7.8%;
+}
+.toolbar #top-section{
+    position:relative;
+    float: left;
+    
+}
+
+.toolbar .menu-block-1, .toolbar .menu-block-2, .toolbar .menu-block-3,
+.toolbar .menu-block-4, .toolbar .menu-block-5{
+    padding: auto;
+    height: auto;
+}
 img{
         max-width: 100% !important;
     }
@@ -599,6 +626,32 @@ img{
     .navbar-brand, .lead.slogan{
         margin-left: 19%;
     }
+    
+   .toolbar #custom-search-block{
+    position:relative;
+    float: right;
+    top: -150px;
+    right: 19.2%;
+}
+   .toolbar .lead.slogan{
+    position:relative;
+    float: left;
+   // width: 50%;
+  }
+   .toolbar #navbar.navbar.container.navbar-default{
+    position:relative;
+    float: left;
+    left: 20%;
+    top: 52px;
+  }
+   .toolbar #top-section{
+    position:relative;
+    float: left;
+    
+  }
+  .menu-block-1, .menu-block-2, .menu-block-3, .menu-block-4, .menu-block-5{
+      height: auto;
+  }
 }
 @media screen and (min-width: 1000px) {
     
