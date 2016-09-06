@@ -104,9 +104,9 @@ header h2 a{
 }
 .menu-block-1, .menu-block-2, .menu-block-3, .menu-block-4, .menu-block-5{
     padding-left: 30px;
-    padding-top:5px;
+    padding-top:8px;
     background: gray;
-    height: 52px;
+    height: 53px;
     
     font-family: Gill Sans MT, sans-serif;;
     text-transform: uppercase;
@@ -273,7 +273,9 @@ header h2 a{
     padding-left: 0px;
 }
 .main-container.container .page-header{
-    margin-top: 20px;
+    margin-top: 10px;
+    border-bottom: none;
+    padding-bottom: 0px;
 }
 /*
 .pagination > .active > a, 
@@ -326,7 +328,8 @@ header h2 a{
          background-repeat: no-repeat !important; background-size: 100% !important;
 }
 
-.node.node-promoted.node-teaser img, .node-teaser img{
+.node.node-promoted.node-teaser img, .node-teaser img,
+.field.field-name-field-image.field-type-image img{
     position: relative;
     float: left;
     width: 50% !important;
@@ -341,16 +344,21 @@ header h2 a{
     margin-top: 50px !important;
     
 }
+
+
+
+
 .node.node-promoted.node-teaser, .node-teaser{
     border: 1px #e7e7e7 solid;
-    margin-bottom: 2px;
-    padding: 20px;
+    
+    padding-left: 20px;
+    padding-right: 20px;
     background: #FFFFFF;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
-.node.node-promoted.node-teaser{
-    margin-top: 40px;
-    margin-bottom: 0px;
+.node.node-promoted.node-teaser 
+{
+    margin-top: 10px;
 }
 
 
@@ -358,6 +366,18 @@ header h2 a{
 .node.node-promoted.node-teaser .submitted a,
 .node.node-teaser .submitted a{
     color: #cc3300;
+    font-weight: bold;
+    font-size: 11px;
+    font-style: normal;
+    text-transform: uppercase;
+}
+.submitted{
+    font-style: normal;
+    font-size: 11px;
+   // color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .node.node-teaser .submitted .date-and-link{
     position:relative;
@@ -407,9 +427,12 @@ fieldset .fieldset-legend {
 }
 
 .region.region-sidebar-second{
-  margin-top: 30px;  
+  margin-top: 40px;  
 }
 
+.page-frontpage .region.region-sidebar-second{
+  margin-top: 0px;  
+}
 .links.list-inline{
     position:relative;
     float: left;

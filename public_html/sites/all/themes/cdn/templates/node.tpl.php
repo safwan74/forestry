@@ -12,8 +12,8 @@
         <div class="date-and-link">
       <?php //print $submitted; 
      // print $date;
-      
       print date( "F j, Y",$node->created); 
+      print "  <span style='color: black;'>. </span>";
       ?>
        <?php if($teaser): ?> <a href="<?php print $node_url; ?>"> Full Article</a>
        <?php endif; ?>

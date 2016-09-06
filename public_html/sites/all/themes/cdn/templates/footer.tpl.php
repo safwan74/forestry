@@ -13,7 +13,7 @@ $url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 <div style="position:relative; float: right; padding-right: 25%; margin-top: 50px;">
 <a href="<?php
 if (strpos($url,'washington-state') !== false) {
-    echo "https://www.facebook.com/WSSAF1";
+    echo "https://www.facebook.com/washingtonsaf";
 } 
 
 elseif (strpos($url,'oregon') !== false) {
