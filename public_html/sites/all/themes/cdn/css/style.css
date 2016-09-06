@@ -336,7 +336,7 @@ header h2 a{
     height: auto !important;
     margin: 0px !important;
     margin-right: 20px !important;
-    //margin-left: 0px !important;
+    margin-bottom: 10px !important;
 }
 .node.node-promoted.node-teaser img::after, .node-teaser img::after{
     position:relative;
