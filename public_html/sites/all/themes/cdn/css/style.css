@@ -48,10 +48,7 @@ header h2 a{
     width: 400px;
     
 }
-.logged-in #custom-search-block {
-   
-    margin-top: 20px;
-}
+
 
 #custom-search-block form{ position:relative; float: right; width: 200px;}
 .btn.btn-primary{
@@ -715,6 +712,7 @@ img{
 
 @media screen and (max-width: 700px) {
     
+    
     .footer-div{
         
         width: 100%;
@@ -782,6 +780,27 @@ img{
    left: 0px;
    
 }
+
+   .toolbar #navbar.navbar.container.navbar-default{
+    position: inherit;
+    float: none;
+    height: auto;
+    background: none;
+  }
+  .toolbar #custom-search-block{
+      width: 100%;
+      margin-bottom: 0px;
+      width: 100%;
+  }
+  .toolbar .menu-block-1, 
+   .toolbar .menu-block-2, 
+   .toolbar .menu-block-3, 
+   .toolbar .menu-block-4, 
+   .toolbar .menu-block-5{
+       clear:both;
+       //height: 50px;
+       
+   }
 
 }
 
