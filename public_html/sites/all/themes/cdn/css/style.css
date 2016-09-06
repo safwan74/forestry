@@ -786,12 +786,16 @@ img{
     float: none;
     height: auto;
     background: none;
+    margin: 0px;
+    
   }
   .toolbar #custom-search-block{
-      width: 100%;
+      
       margin-bottom: 0px;
       width: 100%;
+      
   }
+ 
   .toolbar .menu-block-1, 
    .toolbar .menu-block-2, 
    .toolbar .menu-block-3, 
