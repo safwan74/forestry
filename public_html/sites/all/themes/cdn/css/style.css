@@ -542,19 +542,27 @@ fieldset .fieldset-legend {
    
 }
 
-#user-login, #user-register-form, #user-pass, #contact-site-form{
-    padding: 50px;
-    background: white;
-}
-.region.region-content{
+#user-login, #user-register-form, #user-pass, #contact-site-form, 
+.page-washington-state-events .region.region-content .view-calendar,
+.page-inland-empire-events .region.region-content .view-calendar,
+.page-inland-empire-reports .region.region-content #block-system-main,
+.page-alaska-events .region.region-content .view-calendar,
+.region.region-content, 
+.page-washington-state-reports .region.region-content #block-system-main{
     padding: 20px;
     background: white;
 }
+
+
+
 .page-frontpage .region.region-content, 
 .page-washington-state .region.region-content,
 .page-inland-empire .region.region-content,
 .page-alaska .region.region-content,
-.page-taxonomy-term-6 .region.region-content {
+.page-taxonomy-term-6 .region.region-content,
+.page-oregon-article .region.region-content,
+.page-oregon-outreach-and-eduction .region.region-content,
+.page-oregon-policy .region.region-content{
     padding: 0px;
     background: none;
 }
