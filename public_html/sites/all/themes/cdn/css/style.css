@@ -346,8 +346,13 @@ header h2 a{
     margin-bottom: 2px;
     padding: 20px;
     background: #FFFFFF;
-    margin-top: 40px;
+    margin-bottom: 40px;
 }
+.node.node-promoted.node-teaser{
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+
 
 .node.node-promoted.node-teaser .node-readmore a, .node-teaser .node-readmore a,
 .node.node-promoted.node-teaser .submitted a,
