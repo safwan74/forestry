@@ -638,16 +638,23 @@ img{
    .toolbar #navbar.navbar.container.navbar-default{
     position:relative;
     float: left;
-    left: 20%;
-    top: 52px;
+    left: 20.05%;
+    top: 32px;
   }
    .toolbar #top-section{
     position:relative;
     float: left;
     
   }
-  .menu-block-1, .menu-block-2, .menu-block-3, .menu-block-4, .menu-block-5{
+  .toolbar .menu-block-1, .toolbar .menu-block-2, .toolbar .menu-block-3, 
+  .toolbar .menu-block-4, .toolbar .menu-block-5{
+      position:relative;
+      float: left;
+      clear:both;
       height: auto;
+      width: 100%;
+      //padding-top: 20px;
+      padding: auto;
   }
 }
 @media screen and (min-width: 1000px) {
