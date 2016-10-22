@@ -144,6 +144,46 @@
         <nav role="navigation">
           <?php if (!empty($primary_nav)): ?>
             <?php print render($primary_nav); ?>
+            
+            <div class="social-media-nav">
+<a href="<?php
+if (strpos($url,'washington-state') !== false) {
+    echo "https://www.facebook.com/washingtonsaf";
+} 
+
+elseif (strpos($url,'oregon') !== false) {
+    echo "https://www.facebook.com/Oregon-Society-of-American-Foresters-142371965814882/";
+} 
+
+elseif (strpos($url,'inland-empire') !== false) {
+    echo "https://www.facebook.com/Inland-Empire-Society-of-American-Foresters-225824837485799/";
+}
+
+elseif (strpos($url,'alaska') !== false) {
+    echo "https://www.facebook.com/AKSAF/1";
+} 
+else {
+    echo "https://www.facebook.com";
+}
+   ?>"><img src="/sites/all/images/facebook.png"></a>
+    
+<a href="<?php 
+if (strpos($url,'oregon') !== false) {
+    echo "https://twitter.com/Oregon_SAF";
+}
+
+elseif (strpos($url,'alaska') !== false) {
+    echo "https://twitter.com/AlaskaSAF1";
+} 
+
+else{
+    echo "https://twitter.com";
+}
+
+?>">
+    <img src="/sites/all/images/twitter.png"></a>
+</div>
+            
           <?php endif; ?>
           
           <?php if (!empty($page['navigation'])): ?>

@@ -24,7 +24,7 @@ header h2 a{
 }
 #top-section{
     
-   background-image: url(/sites/all/images/header.gif);
+   background-image: url(/sites/all/images/header.jpg);
    background-repeat: no-repeat;
    background-size: 100% 100%;
    height: auto;
@@ -99,14 +99,15 @@ header h2 a{
     z-index: 99;
     border-top: none;
 }
-.menu-block-1, .menu-block-2, .menu-block-3, .menu-block-4, .menu-block-5{
+.menu-block-1, .menu-block-2, .menu-block-3, .menu-block-4, .menu-block-5,
+.menu-block-6{
     padding-left: 30px;
     padding-top:8px;
     background: gray;
     height: 53px;
     
     font-family: Gill Sans MT, sans-serif;;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     
 }
 .dropdown-menu{
@@ -117,7 +118,8 @@ header h2 a{
 .menu-block-2 .nav > li > a:hover, .menu-block-2 .nav > li > a:focus,
 .menu-block-3 .nav > li > a:hover, .menu-block-3 .nav > li > a:focus,
 .menu-block-4 .nav > li > a:hover, .menu-block-4 .nav > li > a:focus,
-.menu-block-5 .nav > li > a:hover, .menu-block-5 .nav > li > a:focus{
+.menu-block-5 .nav > li > a:hover, .menu-block-5 .nav > li > a:focus,
+.menu-block-6 .nav > li > a:hover, .menu-block-6 .nav > li > a:focus{
     
     color: #333;
 }
@@ -125,7 +127,8 @@ header h2 a{
 .menu-block-2 .active-trail:hover .dropdown-menu,
 .menu-block-3 .active-trail:hover .dropdown-menu,
 .menu-block-4 .active-trail:hover .dropdown-menu,
-.menu-block-5 .active-trail:hover .dropdown-menu{
+.menu-block-5 .active-trail:hover .dropdown-menu,
+.menu-block-6 .active-trail:hover .dropdown-menu{
     margin-top: 0px;
     border-radius: 0px;
     border: none;
@@ -139,6 +142,7 @@ header h2 a{
 .menu-block-3 .dropdown-menu > li a:hover,
 .menu-block-4 .dropdown-menu > li a:hover,
 .menu-block-5 .dropdown-menu > li a:hover,
+.menu-block-6 .dropdown-menu > li a:hover,
 .navbar-default  .dropdown-menu li a:hover{
    /* background-color: transparent;*/
     //color:black;
@@ -147,7 +151,8 @@ header h2 a{
 .menu-block-2 ul li,
 .menu-block-3 ul li,
 .menu-block-4 ul li,
-.menu-block-5 ul li{
+.menu-block-5 ul li,
+.menu-block-6 ul li{
     position:relative;
     float: left;
     display:inline;
@@ -157,7 +162,8 @@ header h2 a{
 .menu-block-2 ul li a,
 .menu-block-3 ul li a,
 .menu-block-4 ul li a,
-.menu-block-5 ul li a{
+.menu-block-5 ul li a,
+.menu-block-6 ul li a{
     color: white;
     font-size: 12px;
     letter-spacing: 1px;
@@ -210,7 +216,7 @@ header h2 a{
     
     
     font-family: Charcoal, sans-serif;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-size: 12px;
     letter-spacing: 1px;
 }
@@ -218,7 +224,8 @@ header h2 a{
 .menu-block-2 .active, .menu-block-2 .active-trail,
 .menu-block-3 .active, .menu-block-3 .active-trail,
 .menu-block-4 .active, .menu-block-4 .active-trail,
-.menu-block-5 .active, .menu-block-5 .active-trail{
+.menu-block-5 .active, .menu-block-5 .active-trail,
+.menu-block-6 .active, .menu-block-6 .active-trail{
     color: gray;
     background: #F5F3F2;
 }
@@ -227,7 +234,8 @@ header h2 a{
 .menu-block-2 .dropdown-menu > li > a,
 .menu-block-3 .dropdown-menu > li > a,
 .menu-block-4 .dropdown-menu > li > a,
-.menu-block-5 .dropdown-menu > li > a{
+.menu-block-5 .dropdown-menu > li > a,
+.menu-block-6 .dropdown-menu > li > a{
     margin-bottom:0px;
     color: gray;
     
@@ -236,7 +244,8 @@ header h2 a{
 .menu-block-2 .dropdown-menu > li,
 .menu-block-3 .dropdown-menu > li,
 .menu-block-4 .dropdown-menu > li,
-.menu-block-5 .dropdown-menu > li{
+.menu-block-5 .dropdown-menu > li,
+.menu-block-6 .dropdown-menu > li{
   position:relative;
   float: left;
   width: 100%;
@@ -252,7 +261,8 @@ header h2 a{
 .menu-block-2 .dropdown-menu > .active.active-trail > a,
 .menu-block-3 .dropdown-menu > .active.active-trail > a,
 .menu-block-4 .dropdown-menu > .active.active-trail > a,
-.menu-block-5 .dropdown-menu > .active.active-trail > a
+.menu-block-5 .dropdown-menu > .active.active-trail > a,
+.menu-block-6 .dropdown-menu > .active.active-trail > a
 {
     background: #e7e7e7;
     
@@ -309,14 +319,14 @@ header h2 a{
 }
 
 .alaska{
-    background: url(/sites/all/images/alaska-header.gif) !important;
+    background: url(/sites/all/images/alaska-header.jpg) !important;
 }
 .washington-state{
-    background: url(/sites/all/images/washington-state-header.gif) !important;
+    background: url(/sites/all/images/washington-state-header.jpg) !important;
          background-repeat: no-repeat !important; background-size: 100% !important;
 }
 .inland-empire{
-    background: url(/sites/all/images/inland-empire-header.jpg) !important;
+    background: url(/sites/all/images/inland-empire-header_1.jpg) !important;
          background-repeat: no-repeat !important; background-size: 100% !important;
 }
 
@@ -413,10 +423,22 @@ fieldset .fieldset-legend {
     text-transform: uppercase;
 }
 .view.view-western-forester{
-    border: 1px #e7e7e7 solid;
+    position:relative;
+    float: left;
+   // border: 1px #e7e7e7 solid;
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 10px;
+}
+.page-northwest-office-western-forester- .region.region-content,
+.page-northwest-office-actions .region.region-content,
+.page-oregon .region.region-content{
+    background: transparent;
+    border: none;
+    padding: 0px;
+}
+.calendar-calendar td{
+    text-align: center;
 }
 .view.view-western-forester h3{
     border-top: 1px #e7e7e7 solid;
@@ -451,9 +473,8 @@ fieldset .fieldset-legend {
     .footer-div{
         position: relative;
         float: left;
-        width: 29%;
-        margin-right:2%;
-        margin-left: 2%;
+        width: 100%;
+        text-align: center;
         
     }
     .footer-div .date-heading a{
@@ -609,12 +630,87 @@ fieldset .fieldset-legend {
 }
 
 .toolbar .menu-block-1, .toolbar .menu-block-2, .toolbar .menu-block-3,
-.toolbar .menu-block-4, .toolbar .menu-block-5{
+.toolbar .menu-block-4, .toolbar .menu-block-5, .toolbar .menu-block-6{
     padding: auto;
     height: auto;
 }
 img{
         max-width: 100% !important;
+    }
+    
+    .col-sm-3{
+        width: 20%;
+    }
+    
+    .col-sm-9{
+        width: 80%;
+    }
+    
+    .custom-teaser{
+        position:relative;
+        float: left;
+        width: 100%;
+        background: white;
+        margin-top: 10px;
+        padding: 10px;
+    }
+    .view.view-western-forester.view-id-western_forester.view-display-id-page
+    .view-content .item-list .views-summary li {
+        position: relative;
+        float: left;
+        width: 100%; 
+        list-style: none;
+        padding: 5px;
+    }
+    
+    .view.view-western-forester.view-id-western_forester.view-display-id-page
+    .view-content .item-list .views-summary li:nth-child(odd){
+        background:lightgray;
+    }
+    #comments{
+        position:relative;
+        float: left;
+        width: 100%;
+    }
+    .tabs--primary.nav.nav-tabs{
+        margin-bottom: 0px;
+    }
+    .tabs--primary.nav.nav-tabs .active, .page-user-scheduler th .active {
+        color: #0062A0;
+        background: white;
+    }
+    
+    .social-media-nav{
+        position:relative; float: right;
+    }
+    .social-media-nav img{
+        width: 50px !important;
+    }
+    .social-media-nav img:hover{
+        opacity: 0.6;
+    }
+    
+    .view.view-calendar.view-id-calendar{
+       
+        margin-bottom: 10px;
+        
+    }
+    .date-heading a{
+        color: #606060;
+    }
+ 
+#block-views-calendar-block-1{
+        position:relative;
+        float: left;
+        
+    }
+   #block-views-up-coming-events-block {
+        position:relative;
+        float: right;
+        font-size: small;
+        margin-left: 1%;
+        
+        
     }
 @media screen and (min-width: 1500px) {
     #custom-search-block{
@@ -647,7 +743,7 @@ img{
     
   }
   .toolbar .menu-block-1, .toolbar .menu-block-2, .toolbar .menu-block-3, 
-  .toolbar .menu-block-4, .toolbar .menu-block-5{
+  .toolbar .menu-block-4, .toolbar .menu-block-5, .toolbar .menu-block-6{
       position:relative;
       float: left;
       clear:both;
@@ -659,7 +755,17 @@ img{
 }
 @media screen and (min-width: 1000px) {
     
-    
+    #block-views-up-coming-events-block ,
+    #block-views-calendar-block-1{
+        padding: 20px;
+        min-height: 400px;
+        width: 49%;
+        border: 1px #e7e7e7 solid;
+        background: white;
+    }
+    #block-views-up-coming-events-block{
+        padding-top: 0px;
+    }
     .region.region-sidebar-second img{
         width: 100%;
     }
@@ -719,7 +825,14 @@ img{
 
 @media screen and (max-width: 700px) {
     
-    
+        #block-views-up-coming-events-block ,
+    #block-views-calendar-block-1{
+        float: left;
+        padding: 10px;
+        min-height: 100px;
+        width: 100%;
+       
+    }
     .footer-div{
         
         width: 100%;
@@ -750,13 +863,14 @@ img{
   margin-top: 5px;  
 }
 #block-menu-block-1, #block-menu-block-2,#block-menu-block-3, #block-menu-block-4,
-#block-menu-block-5{
+#block-menu-block-5, #block-menu-block-6{
     
     float: none;
     width: 100%;
     z-index: 999;
 }
-.menu-block-1, .menu-block-2, .menu-block-3, .menu-block-4, .menu-block-5{
+.menu-block-1, .menu-block-2, .menu-block-3, .menu-block-4, .menu-block-5
+, .menu-block-6{
     padding-left: 10px;
     padding-top:5px;
     
@@ -807,10 +921,14 @@ img{
    .toolbar .menu-block-2, 
    .toolbar .menu-block-3, 
    .toolbar .menu-block-4, 
-   .toolbar .menu-block-5{
+   .toolbar .menu-block-5,
+   .toolbar .menu-block-6{
        clear:both;
        //height: 50px;
        
+   }
+   .col-sm-3, .col-sm-9{
+       width: 100%;
    }
 
 }
